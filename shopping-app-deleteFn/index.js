@@ -79,6 +79,13 @@ function deleteForListItem(itemIndex) {
   STORE.splice(itemIndex, 1);      
 }
 
+
+function deleteListItem(itemIndex) {
+  console.log('Deleting item at index ' + itemIndex);
+  STORE.splice(itemIndex,1);
+
+}
+
 function handleDeleteItemClicked() {
   $('.js-shopping-list').on('click', '.js-item-delete', event => {
     const itemIndex = getItemIndexFromElement(event.currentTarget);
@@ -88,6 +95,7 @@ function handleDeleteItemClicked() {
 }
 
 function handleShoppingList() {
+  console.log('Hello World');
   renderShoppingList();
   handleNewItemSubmit();
   handleItemCheckClicked();
